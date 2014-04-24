@@ -1,16 +1,15 @@
-@import 'themes/themeSettings_grey';
-// @import 'themes/themeSettings_black';
+@import 'themes/themeSettings_black';
+// @import 'themes/themeSettings_blue';
 // @import 'themes/themeSettings_red';
-// @import 'themes/themeSettings_yellow';
 
 // Global Fonts
-$georgia: Georgia, serif;
-$lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;	
+$Helvetica: 'Helvetica', sans-serif;
+$Roboto: 'Roboto Slab', serif;
 
 // Global Variables
 $maxWidth: 990px;
-$fontFamily: $lucida;
-$headingFontFamily: $georgia;
+$fontFamily: $Helvetica;
+$headingFontFamily: $Roboto;
 
 
 @mixin gradient($color1, $color2){

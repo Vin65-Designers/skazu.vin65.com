@@ -1,77 +1,80 @@
 // Colors
-$grey: #575757;
-$grey-light: #ccc;
+$grey: #595959;
+$grey-light: #4D4D4D;
 $grey-dark: #333;
 $black: #000;
 $white: #fff;
-$offWhite: #f1f1f1;
-$blue: #369;
+$offWhite: #f0f0f0;
+$blue: #138085;
 $blue-light: #3b73ac;
 $blue-dark: #2e5b87;
 $offBlack: #111;
+$black-grey: #333333;
 $flatgrey: #999999;
+$red: #E84C3D;
+$teal: #f3af40;
+$orange: #138085;
 
 // Font Colors
 $fontColor: $offBlack; // Main Body Content font color
-$linkColor: $blue; // Main Body content link color
+$linkColor: $orange; // Main Body content link color
 
 // Background Color
-$backgroundColor: $black; // Main Background Color
+$backgroundColor: $grey-dark; // Main Background Color
+$secondBackgroundColor: $offWhite; // The secondary background color
 $homepageContentColor: $white; // Homepage content background color
 $contentBackgroundColor: $white; //Content background color
 $contentBoxShadow: $flatgrey;
+$topBorderColor: $grey-dark;
 
 // Heading Colors
-$headingFontColor: $white; // Default Heading Font Color
-$headerFontColor: $white; // Font Color outside the container
+$headingFontColor: $black-grey; // Default Heading Font Color
+$homeHeadingFontColor: $white; // Default Homepage Font Color
+$headerFontColor: $grey-light; // Font Color outside the container
 $headerFontColorHover: $black; // Hover font color outside the container
 
 // User Tools Colors
 $topBarColor: $black; // User Tools background color
-$userToolsLinkColor: $grey-light; // Link Color for user tools
+
+$userToolsLinkColor: $grey-light; // Link Color for user tools tablet + desktop
 
 // Navigation Colors
 $navLinkColor: $white; //Font Color for main navigation
 $navLinkHover: $offWhite; //Font Hover for main navigation
+$navMenuBackground: $grey-light; //Navigation background color
 
 $navSelected: $white;
 $leftNavSelected: $black;
 
-$subNavLinkColor: $grey; //Font Color for sub navigation
-$subNavLinkHover: $black; //Font Color for sub navigation hover
-$subNavBackgroundColor: $white; //Background Color for sub navigation
+$subNavLinkColor: $white; //Font Color for sub navigation
+$subNavLinkHover: $offWhite; //Font Color for sub navigation hover
+$subNavBackgroundColor: $grey-dark; //Background Color for sub navigation
+$subNavBackgroundHover: $grey; //Background Hover for sub navigation
 
 // Footer Colors
-$footerColor: $grey; //Footer Color
-$footerLink: $white; // Footer Link
-$footerLinkHover: $offWhite; // Footer Link Hover
+$footerColor: $black-grey; //Footer Color
+$footerLink: $black-grey; // Footer Link
+$footerLinkHover: $offBlack; // Footer Link Hover
+$footerBackgroundColor: $offWhite; // Footer Background Color
 
-$footerFontColor: $white; //Font Color outside the container
-$footerFontColorHover: $offWhite; // Hover font color outside the container
+$footerFontColor: $black-grey; //Font Color outside the container
+$footerFontColorHover: $offBlack; // Hover font color outside the container
 
 // Border Colors
 $borderColor: $grey-light; // Main Border Color
 
 // Button Colors
-@mixin mainButtonColor() {
-	@include gradient($blue-light, $blue-dark); // Main Button Color
-} 
+$mainButtonColor: $teal; // Main Button Color
 
-@mixin mainButtonHover() {
-	@include gradient(lighten($blue-light, 5%), lighten($blue-dark, 5%));
-} 
+$mainButtonHover: lighten($teal, 5%);
 
 $mainButtonText: $white; // Main Button Font Color
 $boxShadowColor: $blue; // Box Shadow Color
 $boxShadowHover: $blue-light; // Box Shadow Hover Color
 
-@mixin altButtonColor() {
-	@include gradient($grey-light, $grey-dark); // Main Button Color
-} 
+$altButtonColor: $grey-light; // Main Button Color
 
-@mixin altButtonHover() {
-	@include gradient(lighten($grey-light, 5%), lighten($grey-dark, 5%));
-} 
+$altButtonHover: lighten($grey-light, 5%);
 
 $altButtonText: $black; // Alt Button Font Color
 $altBoxShadowColor: $grey-light; // Box Shadow Color

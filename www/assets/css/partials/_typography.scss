@@ -1,16 +1,16 @@
 html {
 	font-size: 75%;
+	@media screen and (min-width:581px){
+		border-top: 7px solid $topBorderColor;		
+	}
 }
 
 body{
-	background-color: $backgroundColor;
+	background-color: $secondBackgroundColor;
 	color: $fontColor;
 	font-family: $fontFamily;
-	max-width: 990px;
-	margin: 0 auto;
-
 	@media screen and (min-width: 581px) and (max-width: 1030px){
-		padding: 0 10px;
+		// padding: 0 10px;
 	}
 }
 
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: $headingFontColor;
 	font:{
 		family: $headingFontFamily;
-		style: italic;
+		style: normal;
 		weight: normal;
 	}
 	margin: 0;
@@ -60,12 +60,18 @@ h6 {
 	margin-bottom: 1.5em;
 }
 
+.v65-product-title {
+	a {
+		color:$headingFontColor;
+	}
+}
+
 .v65-title { 
 	color: $headingFontColor;
 	font:{
 		family: $headingFontFamily;
 		size: 2em;
-		style: italic;
+		style: normal;
 		weight: normal;
 	}
 	line-height: 1;

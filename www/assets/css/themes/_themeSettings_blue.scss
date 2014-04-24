@@ -5,27 +5,27 @@ $grey-dark: #333;
 $black: #000;
 $white: #fff;
 $offWhite: #f0f0f0;
-$blue: #369;
+$blue: #138085;
 $blue-light: #3b73ac;
 $blue-dark: #2e5b87;
 $offBlack: #111;
 $black-grey: #333333;
 $flatgrey: #999999;
 $red: #E84C3D;
-$teal: #1bb697;
+$teal: #f3af40;
 $orange: #d35400;
 
 // Font Colors
 $fontColor: $offBlack; // Main Body Content font color
-$linkColor: $orange; // Main Body content link color
+$linkColor: $blue; // Main Body content link color
 
 // Background Color
-$backgroundColor: $red; // Main Background Color
+$backgroundColor: $blue; // Main Background Color
 $secondBackgroundColor: $offWhite; // The secondary background color
 $homepageContentColor: $white; // Homepage content background color
 $contentBackgroundColor: $white; //Content background color
 $contentBoxShadow: $flatgrey;
-$topBorderColor: $red;
+$topBorderColor: $blue;
 
 // Heading Colors
 $headingFontColor: $black-grey; // Default Heading Font Color

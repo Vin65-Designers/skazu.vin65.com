@@ -1,93 +1,219 @@
+.menu-visible {
+	overflow-x:hidden;
+	width: 100%;
+}
+
+.mainMenu {
+	position: relative;
+	z-index:2;
+}
+
+.mainMenu {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.animating, .menu-visible {
+  display: block;
+}
+ 
+.animating {
+  transition: transform .25s ease-in-out;
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+}
+ 
+.mainMenu.animating.leftAnimate {
+  transform: translate3d( 240px, 0, 0 );
+  -webkit-transform: translate3d( 240px, 0, 0 );
+}
+
+.mainMenu.animating.rightAnimate {
+  transform: translate3d( -240px, 0, 0 );
+  -webkit-transform: translate3d( -240px, 0, 0 );
+}
+
+.mainMenu.menu-visible {
+  left:0 !important;
+}
+
+.menuText {
+	text-indent: -9999px;
+	line-height: 0; /* Collapse the original line */
+	padding:0;
+}
+
+.menuText::after {
+	@media screen and (min-width:581px){
+		content: "Menu";
+		text-indent: 30px;
+		display: block;
+		line-height: initial; /* New content takes up original line height */
+		padding:0;
+	}
+}
+
+.menuIcon {
+	@media screen and (min-width:581px){
+		display: none;
+	}
+	@media screen and (max-width:580px){
+		background: url('/assets/images/menu-mobile.png') no-repeat center;
+		width:22px;
+		height:15px;
+		float:left;
+		display:block;
+		padding:15px;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	span {
+		padding:0;
+		font-family: arial;
+		color: #fff;
+	}
+}
+.tabletWrapper {
+	max-width: 1024px;
+	margin: 0 auto;
+	@media screen and (max-width:580px){
+		background: $backgroundColor;
+	}
+}
+.tabletMenu {
+	display:none;
+	@media screen and (max-width:1030px){
+		display:block;
+		float: left;
+	}
+}
+
 /* ----- a. Main Menu ----- */
 .mainMenu{
-	font-size: 13px;
-	position: relative;
-	z-index: 101;
-
-	@media screen and (max-width: 767px){
-		margin: 1em 0;
+	font-size: 18px;
+	font-family: $headingFontFamily;
+	font-weight: 300;
+	@media screen and (max-width:580px){
+		z-index: 102;
+		left:-240px;
+		overflow:scroll;
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
+		top: 48px;
+		width: 240px;
+		background: #000;
+		text-transform: capitalize;
+		z-index: 102;
 	}
-
+	@media screen and (min-width:581px){
+		position: relative;
+		z-index: 101;
+	}
 	@media screen and (min-width: 768px){
-		float: right;
-		height: 24px;
-		margin: 80px 0 30px;
+		clear:both;
+		margin: 0 auto;
 	}
 
 	ul{
+		background: $navMenuBackground;
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		position: relative;
 
-		@media screen and (max-width: 767px){
+		@media screen and (min-width:581px){
+			position: relative;
 			text-align: center;
 		}
 
+		@media screen and (max-width: 580px){
+			text-align: left;
+		}
+
 		@media screen and (min-width: 768px){
-			text-align: right;
+			text-align: center;
 		}
 
 		ul{
 			border: 1px solid $borderColor;
 			background: $subNavBackgroundColor;
-			display: none;
-			font-size: 12px;
-			left: -10px;
-			position: absolute;
-			top: 32px;
-			width: 180px;
+			font-size: 14px;
+			@media screen and (min-width:581px){
+				display: none;
+				left: -10px;
+				top:45px;
+				position: absolute;
+				width: 180px;
+			}
 		}
 	}
 
 	li{
-		display: inline-block;
-		padding: 0;
-		position: relative;
+		@media screen and (min-width:581px){
+			display: inline-block;
+			padding: 0;
+			position: relative;
+			padding:8px 30px;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			&:first-child{
+				margin-left: 0;
+			}
 
-		@media screen and (max-width: 767px){
-			margin: 0 10px;
-		}
-
-		@media screen and (min-width: 768px) and (max-width: 819px){
-			margin: 0 0 0 35px;
-		}
-
-		@media screen and (min-width: 820px){
-			margin: 0 0 0 50px;
-		}
-
-		&:first-child{
-			margin-left: 0;
-		}
-
-		// Drop Down
-		&:hover ul{
-			@media screen and (min-width: 768px){
-				display: block;
+			// Drop Down
+			&:hover ul{
+				@media screen and (min-width: 768px){
+					display: block;
+				}
 			}
 		}
 
 		li{
-			display: block;
-			float: none;
 			margin: 0;
 			text-align: left;
-			width: 180px;
+			padding: 0;
+			@media screen and (min-width:581px){
+				display: block;
+				float: none;
+				width: 180px;
+			}
+			@media screen and (max-width: 580px){
+				padding:0.3em 0;
+			}
 
 			a{
 				color: $subNavLinkColor;
-				display: block;
-				height: 28px;
-				line-height: 28px;
 				margin: 0;
-				padding: 0 0 0 10px;
 				text-align: left;
 				text-transform: none;
-				width: 170px;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				@media screen and (min-width:581px){
+					display: block;
+					height: 28px;
+					line-height: 28px;
+					padding: 10px 0 10px 10px;
+					width: 170px;
+				}
+
+				@media screen and (max-width:580px){
+					margin-left: 20px;
+				}
+
+				@media screen and (max-width: 767px){
+					
+				}
+
+				@media screen and (min-width: 768px) and (max-width: 819px){
+					
+				}
+
+				@media screen and (min-width: 820px){
+					
+				}
 
 				&:hover{
-					color: $subNavLinkHover;
+					@media screen and (min-width:581px){
+						color: $subNavLinkHover;
+						background:$subNavBackgroundHover;
+					}
 				}
 			}
 		}
@@ -98,13 +224,19 @@
 		display: inline-block;
 		margin: 0;
 		padding: 0;
-		position: relative;
 		text-decoration: none;
 
+		@media screen and (min-width:581px){
+			position: relative;
+		}
+		
+		@media screen and (max-width:580px){
+			padding:0.3em;
+		}
+
 		@media screen and (max-width: 767px){
-			height: 44px;
-			line-height: 44px;
-			padding: 0 0.5em;
+			height: 32px;
+			line-height: 32px;
 		}
 
 		@media screen and (min-width: 768px){
@@ -131,21 +263,12 @@
 	.v65-selected{
 		color: $leftNavSelected;
 		font-weight: bold;
+		color:#fff;
+		text-decoration: underline;
 	}
 
 	.footerMenuLink{
-		bottom: 0;
-		font-size: 1.5em;
-		position: absolute;
-		right: 0;
-
-		@media screen and (max-width: 450px){
-			display: block;
-		}
-
-		@media screen and (min-width: 451px){
-			display: none;
-		}
+		display: none;
 	}
 }
 
@@ -163,6 +286,7 @@
 	}
 
 	h3{
+		font-size: 2em;
 		@media screen and (max-width: 767px){
 			display: none;		
 		}
@@ -175,7 +299,7 @@
 	}
 
 	li{
-		line-height: 3;
+		line-height: 4;
 
 		@media screen and (max-width: 767px){
 			border-top: 1px solid $borderColor;
@@ -192,6 +316,13 @@
 		display: inline-block;
 		line-height: 1.5;
 		width: 100%;
+		font-family:$headingFontFamily;
+		@media screen and (min-width:768px){
+			font-size: 16px;
+		}
+		@media screen and (max-width:767px){
+			font-size: 14px;
+		}
 	}
 
 	.v65-pageAParent {

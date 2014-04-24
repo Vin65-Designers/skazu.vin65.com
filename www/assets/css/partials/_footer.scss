@@ -1,8 +1,62 @@
 footer{
+	background: $footerBackgroundColor;
 	color: $footerFontColor;
-	padding: 1.5em 0;
-	text-align: center;
+	text-align: left;
 	width: 100%;
+	float:left;
+	font-family:$headingFontFamily;
+	@media screen and (min-width:768px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width: 767px) {
+		font-size: 14px;
+	}
+
+	.footerUpper {
+		max-width: 1024px;
+		margin: 0 auto;
+		@media screen and (min-width:768px) {
+			padding: 1.8em 4% 1.2em;
+		}
+		@media screen and (max-width: 767px) {
+			// padding: 1.8em 0 0;
+			padding:0;
+		}
+	}
+
+	.footerLower {
+		background: #fff;
+		clear: left;
+		padding:20px 4%;
+			ul {
+				max-width: 1024px;
+				margin: 0 auto;
+					li {
+						@media screen and (min-width:768px) {
+							display:inline-block;
+						}
+						@media screen and (max-width: 767px) {
+							border:none;
+							line-height: 30px;
+							padding: 10px 0;
+						}
+					}
+			}
+	}
+
+	nav {
+		@media screen and (min-width:768px) {
+			float: left;
+		}
+	}
+
+	.footerTools {
+		@media screen and (min-width:768px) {
+			float:left;
+			clear:left;
+			line-height: 2em;
+		}
+	}
 
 	ul{
 		list-style: none;
@@ -10,7 +64,7 @@ footer{
 		padding: 0;
 
 		@media screen and (min-width: 768px){
-			margin-bottom: 0.5em;
+			margin: 0 0 0.5em 0;
 		}
 	}
 
@@ -29,7 +83,6 @@ footer{
 		a{
 			color: $footerFontColor;
 			display: inline-block;
-			font-size: 0.917em;
 			position: relative;
 
 			@media screen and (max-width: 767px){
@@ -49,11 +102,7 @@ footer{
 	}
 
 	.legal{
-		font-size: 0.917em;
-
-		li{
-			display: block;
-		}
+		font-size: 14px;
 	}
 
 	a{

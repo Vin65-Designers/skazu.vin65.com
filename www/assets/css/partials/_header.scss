@@ -1,20 +1,67 @@
 header.primary{
-	margin-bottom: 1em;
 	position: relative;
 	width: 100%;
 	z-index: 10;
+	background:#fff;
+}
+
+.headerUpper {
+	max-width:1024px;
+	margin:20px auto;
+	@media screen and (max-width: 580px){
+		margin:0 auto 20px;
+	}
 }
 
 	#user-tools {
-		@media screen and (max-width: 580px){
-			border-bottom: 1px solid $topBarColor;
+
+		@media screen and (max-width:1031px){
+			line-height: 3.8em;
+			margin-right:30px;
+		}
+
+		@media screen and (max-width: 1031px) and (min-width:581px){
+			margin-bottom:15px;
 		}
 
 		a {
-			color: $headerFontColor;
+			@media screen and (max-width:580px){
+				color:#fff;
+			}
+			color: $userToolsLinkColor;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+		.v65-yourAccount {
+			@media screen and (max-width:1031px){
+				width:30%;
+			}
+			@media screen and (max-width: 580px){
+				height:4em;
+			}
+		}
+		.v65-login {
+			@media screen and (max-width:1031px){
+				width:20%;
+			}
+			@media screen and (max-width: 580px){
+				height:4em;
+			}
+		}
+		#v65-modalCart {
+			width:33%;
+		}
+		#v65-modalCart {
+			@media screen and (max-width:580px){
+				width:85%;
+				padding-right: 15px;
+			}
 		}
 	}
-
+	.centerLogo {
+		width:260px;
+		margin:auto;
+	}
 	.logo{
 		background:{
 			image: image-url($logo);
@@ -23,9 +70,17 @@ header.primary{
 		}
 		background-size: contain;
 		display: block;
-		height: 140px;
+		height: 70px;
 		position: relative;
 		width: 260px;
+		margin:25px 0;
+		@media screen and (min-width:581px){
+			padding-bottom: 25px;
+		}
+
+		@media screen and (max-width:580px){
+			padding-bottom: 10px
+		}
 
 		&.errorLogo{
 			float: none;
@@ -37,7 +92,7 @@ header.primary{
 		
 		@media screen and (max-width: 767px){
 			clear: both;
-			margin: 0.5em auto 0;
+			margin: 1em auto 0;
 		}
 
 		@media screen and (min-width: 768px){

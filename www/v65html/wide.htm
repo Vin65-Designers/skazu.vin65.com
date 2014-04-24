@@ -13,7 +13,7 @@
 	<!--//Vin65 QuickLaunch//-->
 	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
 	<!--//Vin65 QuickLaunch//-->
-
+	<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<v65:css files="/assets/css/screen.min.css"></v65:css>
 	
 	<!--[if lt IE 9]>
@@ -24,21 +24,29 @@
 </head>
 <body>
 
-	<header class="primary v65-group">
-		<div id="user-tools">
-			<v65:modalCart></v65:modalCart>	
-			<v65:login></v65:login>
-		</div><!--/user-tools-->
+	<div class="tabletWrapper">
+			<a class="menuIcon" href="#"><span><span></a>
+			<div id="user-tools">
+				<v65:modalCart></v65:modalCart>	
+				<v65:login></v65:login>
+			</div><!--/user-tools-->
+		</div>
 		
-		<h1 class="logo hideText">
-			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
-		</h1>
-		
-		<nav class="mainMenu">
-			<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
-			<a href="#footerMenu" class="footerMenuLink"><i class="icon-menu"></i></a>
-		</nav>
-	</header>
+		<header class="primary v65-group">
+			<div class="headerUpper v65-group">
+				<div class="centerLogo">
+					<h1 class="logo hideText">
+						<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
+					</h1>
+				</div>
+			</div>
+			<div class="headerLower v65-group">
+				<nav class="mainMenu">
+					<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
+					<a href="#footerMenu" class="footerMenuLink"><i class="icon-menu"></i></a>
+				</nav>
+			</div>
+		</header>
 
 	<article class="content pageContent v65-group">		
 		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
@@ -47,20 +55,21 @@
 	</article><!--/contentWide-->
 	
 	<footer>
-		<a name="footerMenu"></a>
-
-		<nav>
-			<v65:layoutFooterNav></v65:layoutFooterNav>
-		</nav>
-
-		<div class="footerTools"> 
-			<v65:contentBlock group="Footer Contact Details"></v65:contentBlock>
-			
+		<div class="footerUpper v65-group">
+			<a name="footerMenu"></a>
+			<nav>
+				<v65:layoutFooterNav></v65:layoutFooterNav>
+			</nav>
+			<div class="footerTools"> 
+				<v65:contentBlock group="Footer Contact Details"></v65:contentBlock>				
+			</div><!--/footerTools-->
+		</div>
+		<div class="footerLower v65-group">
 			<ul class="legal">
 				<li><v65:copyright></v65:copyright></li>
 				<li><v65:vin65Accolade></v65:vin65Accolade></li>
 			</ul>
-		</div><!--/footerTools-->
+		</div>
 	</footer>
 
 	<v65:js files="/assets/js/scripts.js,/assets/nivo/jquery.nivo.slider.pack.js"></v65:js>
