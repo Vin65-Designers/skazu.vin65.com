@@ -130,19 +130,19 @@
 	}
 }
 
-.PodLeft {
+.podLeft {
 	@media screen and (min-width:768px){
 		padding:0 1.5% 0 0;
 	}
 }
 
-.PodMid {
+.podMid {
 	@media screen and (min-width:768px){
 		padding:0 3.5%;
 	}
 }
 
-.PodRight {
+.podRight {
 	@media screen and (min-width:768px){
 		padding:0 0 0 1.5%;
 	}
@@ -151,7 +151,7 @@
 	}
 }
 
-#contentFeaturePod {
+.contentFeaturePod {
 	@media screen and (min-width:768px){
 		float:left;
 		width:30%;
@@ -159,6 +159,7 @@
 	@media screen and (max-width:767px){
 		margin:40px 0;
 	}
+
 	.v65-podImage {
 		img {
 			@media screen and (max-width:767px){
@@ -166,10 +167,12 @@
 			}
 		}
 	}
+	
 	.v65-podDescription {
 		background:#fff;
 		padding:30px 15px;
 		margin-top: -2px;
+		
 		h2 {
 			color: $footerFontColor;
 			font-family: $fontFamily;

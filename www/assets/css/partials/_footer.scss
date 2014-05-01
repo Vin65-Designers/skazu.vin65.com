@@ -5,9 +5,11 @@ footer{
 	width: 100%;
 	float:left;
 	font-family:$headingFontFamily;
+
 	@media screen and (min-width:768px) {
 		font-size: 16px;
 	}
+
 	@media screen and (max-width: 767px) {
 		font-size: 14px;
 	}
@@ -15,11 +17,12 @@ footer{
 	.footerUpper {
 		max-width: 1024px;
 		margin: 0 auto;
+	
 		@media screen and (min-width:768px) {
 			padding: 1.8em 4% 1.2em;
 		}
+	
 		@media screen and (max-width: 767px) {
-			// padding: 1.8em 0 0;
 			padding:0;
 		}
 	}
@@ -28,20 +31,23 @@ footer{
 		background: #fff;
 		clear: left;
 		padding:20px 4%;
-			ul {
-				max-width: 1024px;
-				margin: 0 auto;
-					li {
-						@media screen and (min-width:768px) {
-							display:inline-block;
-						}
-						@media screen and (max-width: 767px) {
-							border:none;
-							line-height: 30px;
-							padding: 10px 0;
-						}
-					}
+
+		ul {
+			max-width: 1024px;
+			margin: 0 auto;
+
+			li {
+				@media screen and (min-width:768px) {
+					display:inline-block;
+				}
+			
+				@media screen and (max-width: 767px) {
+					border:none;
+					line-height: 30px;
+					padding: 10px 0;
+				}
 			}
+		}
 	}
 
 	nav {

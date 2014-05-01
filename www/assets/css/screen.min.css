@@ -18,7 +18,7 @@
 	7. Buttons
 	8. Footer
 */
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -730,7 +730,7 @@ html {
 }
 @media screen and (min-width: 581px) {
   html {
-    border-top: 7px solid #333333;
+    border-top: 7px solid #e84c3d;
   }
 }
 
@@ -822,7 +822,7 @@ dd, dt, li {
 }
 
 a {
-  color: #138085;
+  color: #d35400;
   text-decoration: none;
 }
 a:hover, a:focus, a:active {
@@ -919,8 +919,13 @@ header.primary {
 }
 @media screen and (max-width: 580px) {
   #user-tools #v65-modalCart {
-    width: 85%;
-    padding-right: 15px;
+    padding-right: 1em;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 580px) {
+  #user-tools #v65-toggleModalCart {
+    line-height: 4em;
   }
 }
 
@@ -930,7 +935,7 @@ header.primary {
 }
 
 .logo {
-  background-image: url('../images/logo.png?1395178457');
+  background-image: url('../images/logo.png?1398954790');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -955,7 +960,7 @@ header.primary {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .logo {
-    background-image: url('../images/logo@2x.png?1395178425');
+    background-image: url('../images/logo@2x.png?1398954790');
   }
 }
 @media screen and (max-width: 767px) {
@@ -979,16 +984,6 @@ header.primary {
   width: 100%;
 }
 
-.mainMenu {
-  position: relative;
-  z-index: 2;
-}
-
-.mainMenu {
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-}
-
 .animating, .menu-visible {
   display: block;
 }
@@ -998,27 +993,12 @@ header.primary {
   -webkit-transition: -webkit-transform .25s ease-in-out;
 }
 
-.mainMenu.animating.leftAnimate {
-  transform: translate3d(240px, 0, 0);
-  -webkit-transform: translate3d(240px, 0, 0);
-}
-
-.mainMenu.animating.rightAnimate {
-  transform: translate3d(-240px, 0, 0);
-  -webkit-transform: translate3d(-240px, 0, 0);
-}
-
-.mainMenu.menu-visible {
-  left: 0 !important;
-}
-
 .menuText {
   text-indent: -9999px;
   line-height: 0;
   /* Collapse the original line */
   padding: 0;
 }
-
 @media screen and (min-width: 581px) {
   .menuText::after {
     content: "Menu";
@@ -1030,6 +1010,10 @@ header.primary {
   }
 }
 
+.menuIcon {
+  position: relative;
+  z-index: 1000;
+}
 @media screen and (min-width: 581px) {
   .menuIcon {
     display: none;
@@ -1060,7 +1044,7 @@ header.primary {
 }
 @media screen and (max-width: 580px) {
   .tabletWrapper {
-    background: #333333;
+    background: #e84c3d;
   }
 }
 
@@ -1079,6 +1063,21 @@ header.primary {
   font-size: 18px;
   font-family: "Roboto Slab", serif;
   font-weight: 300;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  position: relative;
+  z-index: 2;
+}
+.mainMenu.animating.leftAnimate {
+  transform: translate3d(240px, 0, 0);
+  -webkit-transform: translate3d(240px, 0, 0);
+}
+.mainMenu.animating.rightAnimate {
+  transform: translate3d(-240px, 0, 0);
+  -webkit-transform: translate3d(-240px, 0, 0);
+}
+.mainMenu.menu-visible {
+  left: 0 !important;
 }
 @media screen and (max-width: 580px) {
   .mainMenu {
@@ -1147,7 +1146,6 @@ header.primary {
     display: inline-block;
     padding: 0;
     position: relative;
-    padding: 8px 30px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   .mainMenu li:first-child {
@@ -1179,6 +1177,7 @@ header.primary {
 .mainMenu li li a {
   color: white;
   margin: 0;
+  padding: 0;
   text-align: left;
   text-transform: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1207,7 +1206,7 @@ header.primary {
   color: white;
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 8px 30px;
   text-decoration: none;
 }
 @media screen and (min-width: 581px) {
@@ -1234,20 +1233,16 @@ header.primary {
 }
 .mainMenu a:hover {
   color: #f0f0f0;
-  text-decoration: none;
-}
-.mainMenu .v65-pageAParent {
-  color: white;
+  text-decoration: underline;
 }
 @media screen and (max-width: 919px) {
   .mainMenu .v65-home {
     display: none;
   }
 }
-.mainMenu .v65-selected {
-  color: black;
+.mainMenu .v65-selected, .mainMenu .v65-pageAParent {
+  color: #f0f0f0;
   font-weight: bold;
-  color: #fff;
   text-decoration: underline;
 }
 .mainMenu .footerMenuLink {
@@ -1438,7 +1433,7 @@ header.primary {
 }
 
 .homepageUpper {
-  background: #333333;
+  background: #e84c3d;
 }
 @media screen and (min-width: 581px) {
   .homepageUpper {
@@ -1452,7 +1447,7 @@ header.primary {
 
 .homepageTagline {
   text-align: center;
-  background: #333333;
+  background: #e84c3d;
 }
 @media screen and (min-width: 581px) {
   .homepageTagline {
@@ -1494,50 +1489,50 @@ header.primary {
 }
 
 @media screen and (min-width: 768px) {
-  .PodLeft {
+  .podLeft {
     padding: 0 1.5% 0 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .PodMid {
+  .podMid {
     padding: 0 3.5%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .PodRight {
+  .podRight {
     padding: 0 0 0 1.5%;
   }
 }
 @media screen and (max-width: 580px) {
-  .PodRight {
+  .podRight {
     margin: 0 !important;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #contentFeaturePod {
+  .contentFeaturePod {
     float: left;
     width: 30%;
   }
 }
 @media screen and (max-width: 767px) {
-  #contentFeaturePod {
+  .contentFeaturePod {
     margin: 40px 0;
   }
 }
 @media screen and (max-width: 767px) {
-  #contentFeaturePod .v65-podImage img {
+  .contentFeaturePod .v65-podImage img {
     width: 100%;
   }
 }
-#contentFeaturePod .v65-podDescription {
+.contentFeaturePod .v65-podDescription {
   background: #fff;
   padding: 30px 15px;
   margin-top: -2px;
 }
-#contentFeaturePod .v65-podDescription h2 {
+.contentFeaturePod .v65-podDescription h2 {
   color: #333333;
   font-family: "Helvetica", sans-serif;
   font-size: 18px;
@@ -1698,7 +1693,7 @@ button span {
   padding: 0 1em;
 }
 button.defaultBtn, button.modalBtn, button.largeBtn {
-  background: #f3af40;
+  background: #1bb697;
   text-decoration: none;
   vertical-align: middle;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1709,7 +1704,7 @@ button.defaultBtn span, button.modalBtn span, button.largeBtn span {
   line-height: inherit;
 }
 button.defaultBtn:hover, button.defaultBtn:active, button.modalBtn:hover, button.modalBtn:active, button.largeBtn:hover, button.largeBtn:active {
-  background: #f5b958;
+  background: #1ecca9;
 }
 button.modalBtn, button.altModalBtn {
   height: 2.5em;
@@ -1736,7 +1731,7 @@ a span {
   line-height: inherit;
 }
 a.linkBtn, a.modalLinkBtn, a.largeLinkBtn {
-  background: #f3af40;
+  background: #1bb697;
   text-decoration: none;
   vertical-align: middle;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1747,7 +1742,7 @@ a.linkBtn span, a.modalLinkBtn span, a.largeLinkBtn span {
   line-height: inherit;
 }
 a.linkBtn:hover, a.linkBtn:active, a.modalLinkBtn:hover, a.modalLinkBtn:active, a.largeLinkBtn:hover, a.largeLinkBtn:active {
-  background: #f5b958;
+  background: #1ecca9;
 }
 a.linkAltBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
   background: #4d4d4d;

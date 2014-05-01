@@ -1,15 +1,15 @@
-@import 'themes/themeSettings_black';
+// @import 'themes/themeSettings_black';
 // @import 'themes/themeSettings_blue';
-// @import 'themes/themeSettings_red';
+@import 'themes/themeSettings_red';
 
 // Global Fonts
-$Helvetica: 'Helvetica', sans-serif;
-$Roboto: 'Roboto Slab', serif;
+$helvetica: 'Helvetica', sans-serif;
+$roboto: 'Roboto Slab', serif;
 
 // Global Variables
 $maxWidth: 990px;
-$fontFamily: $Helvetica;
-$headingFontFamily: $Roboto;
+$fontFamily: $helvetica;
+$headingFontFamily: $roboto;
 
 
 @mixin gradient($color1, $color2){

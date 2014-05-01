@@ -9,9 +9,6 @@ body{
 	background-color: $secondBackgroundColor;
 	color: $fontColor;
 	font-family: $fontFamily;
-	@media screen and (min-width: 581px) and (max-width: 1030px){
-		// padding: 0 10px;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
