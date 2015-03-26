@@ -25,18 +25,6 @@
 	}
 }
 
-.col2{
-	@media screen and (min-width: 581px){
-		float: left;
-		margin-right: 4%;
-		width: 48%;
-	}
-
-	& + .col2{
-		margin-right: 0;
-	}
-}
-
 .v65-featureRight, .v65-right, 
 .v65-featureLeft, .v65-left, 
 .v65-border{
